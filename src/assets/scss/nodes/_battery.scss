@@ -1,0 +1,32 @@
+.battery {
+  width: 80px;
+  height: 80px;
+  background-image: url(./images/battery.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+
+  .buttons {
+    width: 40px;
+    height: max-content;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.54rem;
+    position: absolute;
+    left: 0;
+    margin-top: 5%;
+  }
+
+  .infos {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,82 @@
+@import "./typo"; // Typography
+@import "./icons";
+
+// nodes
+@import "./nodes/battery";
+@import "./nodes/led";
+
+// components
+@import "./components/statusbar";
+@import "./components/nodeslist";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(214, 214, 214);
+  color: #242323;
+  font-family: $fontText;
+}
+
+
+
+.btnadd {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13zm-6 8q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  position: absolute;
+  top: 100px;
+  left: 0.45rem;
+}
+.nodebutton {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 0.8rem;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #131d44;
+    color: #6fff00;
+  }
+
+  &.active {
+    background-color: #d4edda;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+  }
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 12px; /* Mostly for vertical scrollbars */
+  height: 12px; /* Mostly for horizontal scrollbars */
+}
+::-webkit-scrollbar-thumb { /* Foreground */
+  background: var(--scrollbar-foreground);
+  background: red;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track { /* Background */
+  background: var(--scrollbar-background);
+  background: transparent;
+}
